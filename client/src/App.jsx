@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import TeacherDashboard from './components/TeacherDashboard';
 import StudentPortal from './components/StudentPortal';
 import Login from './components/Login';
+import RandomQuestion from './components/RandomQuestion';
 import './App.css';
 
 function App() {
@@ -69,6 +70,15 @@ function App() {
         </div>
 
         {role === 'teacher' ? <TeacherDashboard /> : <StudentPortal />}
+
+        <div className="container mt-5 mb-5 pb-5">
+          <hr />
+          <div className="row justify-content-center">
+            <div className="col-md-8">
+              <RandomQuestion />
+            </div>
+          </div>
+        </div>
       </main>
 
       <footer className="footer mt-auto py-3 bg-light text-center">
